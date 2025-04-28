@@ -1,35 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dona Damayanti_2413025026</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dona Damayanti_2413025026</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    
 <body>
     <!-- menu -->
     <nav>
         <div class="wrapper">
-            <div class="logo"><img src="images/Logo Unila.png" alt=""></div>
+            <div class="logo"><img src="images/Logo Unila.png" alt="Logo Unila"></div>
             <div class="menu">
                 <ul>
-                    <li> <a href=""> Premium Course</a></li>
-                    <li> <a href=""> Tentang Saya</a></li>
-                    <li> <a href=""> Free Course</a></li>
+                    <li><a href="#main-course">Main Course</a></li>
+                    <li><a href="#tentang-saya">Tentang Saya</a></li>
+                    <li><a href="#pengumpulan-tugas">Pengumpulan Tugas</a></li>
                 </ul>
             </div>
+            <button class="hamburger-menu">
+                <i class="fa-solid fa-bars icon-bars"></i>
+                <i class="fa-solid fa-xmark icon-close"></i>
+            </button>
         </div>
     </nav>
 
     <!-- hero / jumbotron -->
-     <header>
+    <header class="full-header">
         <div class="header-opacity"></div>
         <div class="header-jumbotron">
-            <h4>MK Grafika Komputer</h4>
-            <h5>Selamat Datang<br />Di Web Saya</h5>
-            <p>Mulai kuasai coding sekarang, dan cukup #dirumahaja</p>
-            <a href="" class="button button-xl">Mulai Belajar Sekarang</a>
+          <h4>MK Grafika Komputer</h4>
+          <h5>Selamat Datang<br />di Perjalanan Belajarku!</h5>
+          <p>Web ini dibuat untuk belajar, berkembang, dan berbagi hal-hal menarik di dunia teknologi dan pendidikan.</p>
+          <a href="#main-course" class="button button-xl">Mulai Jelajahi Sekarang</a>
         </div>
-     </header>
+    </header>      
+
+    <!-- statistic -->
+    <section id="statistic">
+        <div class="wrapper">
+            <div>
+                <p><i class="fa-solid fa-heart-circle-check"></i>++</p>
+                <small>Code With Heart</small>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-calendar-days"></i>19+</p>
+                <small>Currently 19 y.o</small>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-graduation-cap"></i>2024</p>
+                <small>Information Technology Education</small>
+            </div>
+        </div>   
+    </section>
+
+    <!-- main course -->
+    <section id="main-course">
+        <div class="wrapper">
+            <h4>Main <span>Course</span></h4>
+            <p>Berikut beberapa hasil tugas MK Grafika Komputer</p>
+
+            <div class="grid">
+                <div class="item">
+                    <img src="images/Garis.png" alt="Algoritma Garis" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma garis sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Lingkaran.png" alt="Algoritma Lingkaran" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma lingkaran sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Kurva.png" alt="Algoritma Kurva" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma kurva sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Screenshot 2025-04-27 212159.png" alt="Algoritma Kurva" />
+                    <div class="item-detail">
+                        <p> Pengerjaan Spreadsheets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang-saya">
+        <div class="wrapper">
+          <h4 class="section-title">Tentang <span>Saya</span></h4>
+          <p class="section-subtitle">Seorang mahasiswa dari Universitas Lampung.</p>
+          <div class="tentang-container">
+            <div class="foto">
+              <img src="images/WhatsApp Image 2025-04-24 at 23.47.30.jpeg" alt="Foto Profil" />
+            </div>
+            <div class="desc">
+              <p>
+                Halo! Saya Dona Damayanti, mahasiswa Pendidikan Teknologi Informasi di Universitas Lampung. Saya suka belajar hal baru, terutama di dunia teknologi, desain, dan pendidikan. Semangat berbagi dan berkembang adalah motivasi saya.
+              </p>
+              <div class="social">
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>  
+
+    <!-- pengumpulan tugas -->
+    <section id="pengumpulan-tugas">
+        <div class="wrapper">
+            <h4>Pengumpulan <span>Tugas</span></h4>
+            <p>Berikut tugas tugas yang sudah dikerjakan.</p>
+
+            <div class="grid">
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Garis.png" alt="Tugas 1" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma garis sederhana</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Lingkaran.png" alt="Tugas 2" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma lingkaran sederhana</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Kurva.png" alt="Tugas 3" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma kurva sederhana</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">&copy; 2025 Dona Damayanti</div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
