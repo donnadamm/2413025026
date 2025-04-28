@@ -5,8 +5,10 @@ html,
 body{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-size: 16px;
     font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 .wrapper {
     width: 1024px;
@@ -14,10 +16,7 @@ body{
     padding: 20px 0px 20px 0px;
 }
 
-/*
-* menu
-*/
-
+/*menu*/
 nav {
     background-color: #222831;
     color: #fff;
@@ -42,20 +41,32 @@ nav > .wrapper {
     margin: 0px;
     padding: 0px;
     justify-content: space-between;
+    gap: 30px;
+}
+
+.menu > ul > li {
+    margin-right: 20px;
 }
 
 .menu > ul > li > a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+  nav ul li a:hover {
+    color: #3498db; /* Ganti dengan warna biru muda saat hover */
+  }
 
 .logo {
     display: flex;
     align-items: center;
 }
 .logo > img {
-    height: 45px;
+    height: 60px;
 }
+
 /*
 * Hero / Jumbotron
 */
@@ -66,15 +77,17 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    text-align: center;
     font-family: "Tagesschrift", system-ui;
     letter-spacing: 5px;
     text-shadow: 0 0 4px #222831;
+    padding: 100px 20px;
 }
 .header-opacity {
-    background-color:  background-color: #222831;
+    background-color: #222831;
     width: 100%;
     height: 100%;
-    opacity: 0,7;
+    opacity: 0.7;
     position: absolute;
     top: 0;
     left: 0;
@@ -90,27 +103,32 @@ header {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    z-index: 1;
 }
 
 .header-jumbotron > h4 {
-    color: #0874CC;
+    color: #8875B6;
     font-size: 2rem;
     margin: 0px;
     padding: 0px;
+    font-weight: bold;
 }
 .header-jumbotron > h5 {
     color: #fff;
-    margin: 0px;
+    margin-bottom: 20px;
     padding: 5px;
-    font-size: 3,5rem;
+    font-size: 3.5rem;
     line-height: 4rem;
     text-transform: uppercase;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .header-jumbotron > p {
+    font-size: 18px;
     padding: 5px;
-    margin: 0px 5px 0px 5px;
+    margin: 0px 5px 20px 5px;
     color: #fff;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 a {
@@ -120,9 +138,479 @@ a {
 }
 
 .button {
-    background-color: #0874CC;
+    background-color: #8875B6;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
+}
+.button-xl {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-xl:hover {
+    transform: scale(1.05);
+}
+
+/*
+* statistic
+*/
+#statistic {
+    background-color: #393E46;
+    color: #fff;
     font-family: "Tagesschrift", system-ui;
+}
+
+#statistic > .wrapper {
+    padding: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#statistic > .wrapper > div {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#statistic > .wrapper > div > p {
+    font-size: 3.5rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+#statistic > .wrapper > div > p > i {
+    margin-right: 10px;
+    font-size: 3.5rem;
+}
+
+#statistic > .wrapper > div > small {
+    font-size: 1.5rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+* main course
+*/
+#main-course {
+    background-color: #222831;
+    color: #fff;
+}
+
+#main-course > .wrapper {
+    padding: 50px 0px 50px 0px;
 
 }
+
+#main-course > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    padding: 0px;
+    font-family: "Tagesschrift", system-ui;
+}
+
+#main-course > .wrapper > h4 > span {
+    color: #8875B6;
+}
+
+#main-course > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.grid > .item {
+    border: 1px solid #666;
+    background-color: #393E46;
+    border-radius: 5px;
+    position: relative;
+}
+
+.grid > .item > img {
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid > .item >.item-detail {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    width: 70%;
+}
+
+/*
+* tentang saya
+*/
+
+#tentang-saya {
+    background-color: #A6B1E1;
+    color: #333;
+}
+
+#tentang-saya .wrapper{
+    padding: 60px 20px;
+}
+
+#tentang-saya > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Tagesschrift", system-ui;
+}
+
+#tentang-saya > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-title > span {
+    color: #8875B6;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    font-family: "Tagesschrift", system-ui;
+}
+
+.tentang-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tentang-container > .foto > img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.tentang-container > .foto > img :hover{
+    transform: scale(1.05);
+}
+
+.tentang-container > .desc {
+    max-width: 500px;
+    font-size: 1.1rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: #333;
+    animation: fadeInRight 1s ease;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social > a {
+    font-size: 1.5px;
+    color: #555;
+    margin-right: 15px;
+    transition: 0.3s ease;
+    transform: 0.3s ease;
+}
+
+.social > a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Animasi */
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+/*
+* pengumpulan tugas
+*/
+#pengumpulan-tugas {
+    background-color: #393E46;
+    color: #fff;
+}
+
+#pengumpulan-tugas > .wrapper {
+    padding: 50px 20px;
+
+}
+
+#pengumpulan-tugas > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0;
+    padding: 0px;
+    margin-bottom: 20px;
+    font-family: "Tagesschrift", system-ui;
+}
+
+#pengumpulan-tugas > .wrapper > h4 > span {
+    color: #8875B6;
+}
+
+#pengumpulan-tugas > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+#pengumpulan-tugas > .wrapper > .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+#pengumpulan-tugas > .wrapper > .grid > .item {
+    border: 1px solid #666666;
+    background-color: #a0a6af;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.4rem;
+    width: 30%;
+}
+#pengumpulan-tugas > .wrapper > .grid > .item > img {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    width: 70%;
+}
+
+#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail > img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;   
+}
+
+#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail > div {
+    padding: 10px 20px 10px 20px;
+
+}
+
+/*
+* copyright
+*/
+footer {
+    background-color: #222831;
+    color: #fff;
+    text-align: center;
+}
+
+footer > .wrapper {
+    padding: 30px 0px 30px 0px;
+}
+
+/*
+* hamburger menu
+*/
+button.hamburger-menu {
+    background-color: #222831;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu > i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.hamburger-menu > i.icon-close {
+    display: none;
+}
+
+/*
+* 1024, 900, 768, 600, 450
+*/
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #statistic > .wrapper > div > p {
+        font-size: 2.5rem;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #statistic > .wrapper > div > p > i {
+        font-size: 2.5rem;
+    }
+
+    #statistic > .wrapper > div > small {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 45% 45%;
+    }
+    .item > img {
+        width: 8%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        width: 60%;
+    }
+    .header-jumbotron > h4 {
+        font-size: 1.5rem;
+    }
+    .header-jumbotron > h5 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .header-jumbotron > p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 5px;
+    }
+    .button-xl {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    #statistic > .wrapper > div > p {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+    #statistic > .wrapper > div > p > i {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    #statistic > .wrapper {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    #statistic > .wrapper > div {
+        display: flex;
+    }
+
+    #statistic > .wrapper > div > small {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    #tentang-saya > ,.wrapper > div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #tentang-saya > ,.wrapper > div > .foto {
+        width: 50%;
+    }
+
+    #tentang-saya > ,.wrapper > div > .foto > img {
+        max-width: 100%;
+    }
+
+    #tentang-saya > ,.wrapper > div > .desc {
+        width: 70%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #tentang-saya > ,.wrapper > div > .desc > .social {
+        margin: auto;
+    }
+
+    button.hamburger-menu {
+        display: inline;
+    }
+    .menu {
+        display: none;
+    }
+
+    .tampil {
+        display: inline;
+    }
+    
+    .tampil > ul {
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        position: fixed;
+        top: 85px;
+        left: 0;
+    }
+
+    .tampil > ul > li {
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+
