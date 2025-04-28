@@ -1,616 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
-
-html,
-body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: "Nunito Sans", sans-serif;
-    scroll-behavior: smooth;
-}
-.wrapper {
-    width: 1024px;
-    margin: auto;
-    padding: 20px 0px 20px 0px;
-}
-
-/*menu*/
-nav {
-    background-color: #222831;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-nav > .wrapper {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    align-items: center;
-}
-
-.menu {
-    width: 50%;
-}
-
-.menu > ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.menu > ul > li {
-    margin-right: 20px;
-}
-
-.menu > ul > li > a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-  nav ul li a:hover {
-    color: #3498db; /* Ganti dengan warna biru muda saat hover */
-  }
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-.logo > img {
-    height: 60px;
-}
-
-/*
-* Hero / Jumbotron
-*/
-header {
-    background: url(../images/bg\ header\ blue.jpeg);
-    height: 100vh;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
-    font-family: "Tagesschrift", system-ui;
-    letter-spacing: 5px;
-    text-shadow: 0 0 4px #222831;
-    padding: 100px 20px;
-}
-.header-opacity {
-    background-color: #222831;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.header-jumbotron {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    z-index: 1;
-}
-
-.header-jumbotron > h4 {
-    color: #8875B6;
-    font-size: 2rem;
-    margin: 0px;
-    padding: 0px;
-    font-weight: bold;
-}
-.header-jumbotron > h5 {
-    color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-    font-size: 3.5rem;
-    line-height: 4rem;
-    text-transform: uppercase;
-    animation: fadeInUp 1.5s ease-out;
-}
-
-.header-jumbotron > p {
-    font-size: 18px;
-    padding: 5px;
-    margin: 0px 5px 20px 5px;
-    color: #fff;
-    animation: fadeInUp 1.5s ease-out;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-    text-shadow: none;
-}
-
-.button {
-    background-color: #8875B6;
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
-}
-.button-xl {
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button-xl:hover {
-    transform: scale(1.05);
-}
-
-/*
-* statistic
-*/
-#statistic {
-    background-color: #393E46;
-    color: #fff;
-    font-family: "Tagesschrift", system-ui;
-}
-
-#statistic > .wrapper {
-    padding: 50px;
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-#statistic > .wrapper > div {
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-#statistic > .wrapper > div > p {
-    font-size: 3.5rem;
-    margin: 0px;
-    padding: 0px;
-}
-
-#statistic > .wrapper > div > p > i {
-    margin-right: 10px;
-    font-size: 3.5rem;
-}
-
-#statistic > .wrapper > div > small {
-    font-size: 1.5rem;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/*
-* main course
-*/
-#main-course {
-    background-color: #222831;
-    color: #fff;
-}
-
-#main-course > .wrapper {
-    padding: 50px 0px 50px 0px;
-
-}
-
-#main-course > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    padding: 0px;
-    font-family: "Tagesschrift", system-ui;
-}
-
-#main-course > .wrapper > h4 > span {
-    color: #8875B6;
-}
-
-#main-course > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-}
-.grid > .item {
-    border: 1px solid #666;
-    background-color: #393E46;
-    border-radius: 5px;
-    position: relative;
-}
-
-.grid > .item > img {
-    width: 20%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.grid > .item >.item-detail {
-    text-align: center;
-    padding: 30px;
-    font-size: 1.3rem;
-    font-weight: normal;
-    width: 70%;
-}
-
-/*
-* tentang saya
-*/
-
-#tentang-saya {
-    background-color: #A6B1E1;
-    color: #333;
-}
-
-#tentang-saya .wrapper{
-    padding: 60px 20px;
-}
-
-#tentang-saya > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Tagesschrift", system-ui;
-}
-
-#tentang-saya > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
-}
-
-.section-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.section-title > span {
-    color: #8875B6;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #555;
-    margin-bottom: 40px;
-    font-family: "Tagesschrift", system-ui;
-}
-
-.tentang-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.tentang-container > .foto > img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
-}
-
-.tentang-container > .foto > img :hover{
-    transform: scale(1.05);
-}
-
-.tentang-container > .desc {
-    max-width: 500px;
-    font-size: 1.1rem;
-    font-family: "Bebas Neue", sans-serif;
-    color: #333;
-    animation: fadeInRight 1s ease;
-}
-
-.social {
-    margin-top: 20px;
-}
-
-.social > a {
-    font-size: 1.5px;
-    color: #555;
-    margin-right: 15px;
-    transition: 0.3s ease;
-    transform: 0.3s ease;
-}
-
-.social > a:hover {
-    color: #007bff;
-    transform: scale(1.2);
-}
-
-/* Animasi */
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
-/*
-* pengumpulan tugas
-*/
-#pengumpulan-tugas {
-    background-color: #393E46;
-    color: #fff;
-}
-
-#pengumpulan-tugas > .wrapper {
-    padding: 50px 20px;
-
-}
-
-#pengumpulan-tugas > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0;
-    padding: 0px;
-    margin-bottom: 20px;
-    font-family: "Tagesschrift", system-ui;
-}
-
-#pengumpulan-tugas > .wrapper > h4 > span {
-    color: #8875B6;
-}
-
-#pengumpulan-tugas > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 10px;
-}
-
-#pengumpulan-tugas > .wrapper > .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-#pengumpulan-tugas > .wrapper > .grid > .item {
-    border: 1px solid #666666;
-    background-color: #a0a6af;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail{
-    padding: 0px;
-    margin: 0px;
-    font-size: 1.4rem;
-    width: 30%;
-}
-#pengumpulan-tugas > .wrapper > .grid > .item > img {
-    width: 100%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail {
-    text-align: center;
-    padding: 30px;
-    font-size: 1.3rem;
-    font-weight: normal;
-    width: 70%;
-}
-
-#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail > img {
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;   
-}
-
-#pengumpulan-tugas > .wrapper > .grid > .item > .item-detail > div {
-    padding: 10px 20px 10px 20px;
-
-}
-
-/*
-* copyright
-*/
-footer {
-    background-color: #222831;
-    color: #fff;
-    text-align: center;
-}
-
-footer > .wrapper {
-    padding: 30px 0px 30px 0px;
-}
-
-/*
-* hamburger menu
-*/
-button.hamburger-menu {
-    background-color: #222831;
-    border: none;
-    cursor: pointer;
-    display: none;
-}
-
-button.hamburger-menu > i {
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-button.hamburger-menu > i.icon-close {
-    display: none;
-}
-
-/*
-* 1024, 900, 768, 600, 450
-*/
-@media only screen and (max-width: 1024px) {
-    .wrapper {
-        width: 90%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    #statistic > .wrapper > div > p {
-        font-size: 2.5rem;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    #statistic > .wrapper > div > p > i {
-        font-size: 2.5rem;
-    }
-
-    #statistic > .wrapper > div > small {
-        font-size: 1rem;
-    }
-
-    .grid {
-        grid-template-columns: 45% 45%;
-    }
-    .item > img {
-        width: 8%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .menu {
-        width: 60%;
-    }
-    .header-jumbotron > h4 {
-        font-size: 1.5rem;
-    }
-    .header-jumbotron > h5 {
-        font-size: 2rem;
-        line-height: 2.2rem;
-    }
-
-    .header-jumbotron > p {
-        font-size: 0.8rem;
-    }
-
-    .button {
-        padding: 5px;
-    }
-    .button-xl {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-    #statistic > .wrapper > div > p {
-        font-size: 1.5rem;
-        margin: 0px;
-    }
-    #statistic > .wrapper > div > p > i {
-        font-size: 1.5rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .grid {
-        grid-template-columns: 100%;
-    }
-
-    #statistic > .wrapper {
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    #statistic > .wrapper > div {
-        display: flex;
-    }
-
-    #statistic > .wrapper > div > small {
-        font-size: 1.5rem;
-        padding-left: 10px;
-    }
-
-    #tentang-saya > ,.wrapper > div {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    #tentang-saya > ,.wrapper > div > .foto {
-        width: 50%;
-    }
-
-    #tentang-saya > ,.wrapper > div > .foto > img {
-        max-width: 100%;
-    }
-
-    #tentang-saya > ,.wrapper > div > .desc {
-        width: 70%;
-        padding: 20px;
-        margin: 10px;
-    }
-
-    #tentang-saya > ,.wrapper > div > .desc > .social {
-        margin: auto;
-    }
-
-    button.hamburger-menu {
-        display: inline;
-    }
-    .menu {
-        display: none;
-    }
-
-    .tampil {
-        display: inline;
-    }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dona Damayanti_2413025026</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
     
-    .tampil > ul {
-        flex-direction: column;
-        background-color: #000;
-        width: 100%;
-        position: fixed;
-        top: 85px;
-        left: 0;
-    }
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><img src="images/Logo Unila.png" alt="Logo Unila"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#main-course">Main Course</a></li>
+                    <li><a href="#tentang-saya">Tentang Saya</a></li>
+                    <li><a href="#pengumpulan-tugas">Pengumpulan Tugas</a></li>
+                </ul>
+            </div>
+            <button class="hamburger-menu">
+                <i class="fa-solid fa-bars icon-bars"></i>
+                <i class="fa-solid fa-xmark icon-close"></i>
+            </button>
+        </div>
+    </nav>
 
-    .tampil > ul > li {
-        padding: 10px 20px 10px 20px;
-    }
-}
+    <!-- hero / jumbotron -->
+    <header class="full-header">
+        <div class="header-opacity"></div>
+        <div class="header-jumbotron">
+          <h4>MK Grafika Komputer</h4>
+          <h5>Selamat Datang<br />di Perjalanan Belajarku!</h5>
+          <p>Web ini dibuat untuk belajar, berkembang, dan berbagi hal-hal menarik di dunia teknologi dan pendidikan.</p>
+          <a href="#main-course" class="button button-xl">Mulai Jelajahi Sekarang</a>
+        </div>
+    </header>      
 
+    <!-- statistic -->
+    <section id="statistic">
+        <div class="wrapper">
+            <div>
+                <p><i class="fa-solid fa-heart-circle-check"></i>++</p>
+                <small>Code With Heart</small>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-calendar-days"></i>19+</p>
+                <small>Currently 19 y.o</small>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-graduation-cap"></i>2024</p>
+                <small>Information Technology Education</small>
+            </div>
+        </div>   
+    </section>
 
+    <!-- main course -->
+    <section id="main-course">
+        <div class="wrapper">
+            <h4>Main <span>Course</span></h4>
+            <p>Berikut beberapa hasil tugas MK Grafika Komputer</p>
+
+            <div class="grid">
+                <div class="item">
+                    <img src="images/Garis.png" alt="Algoritma Garis" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma garis sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Lingkaran.png" alt="Algoritma Lingkaran" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma lingkaran sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Kurva.png" alt="Algoritma Kurva" />
+                    <div class="item-detail">
+                        <p>Pembuatan algoritma kurva sederhana</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Screenshot 2025-04-27 212159.png" alt="Algoritma Kurva" />
+                    <div class="item-detail">
+                        <p> Pengerjaan Spreadsheets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang-saya">
+        <div class="wrapper">
+          <h4 class="section-title">Tentang <span>Saya</span></h4>
+          <p class="section-subtitle">Seorang mahasiswa dari Universitas Lampung.</p>
+          <div class="tentang-container">
+            <div class="foto">
+              <img src="images/WhatsApp Image 2025-04-24 at 23.47.30.jpeg" alt="Foto Profil" />
+            </div>
+            <div class="desc">
+              <p>
+                Halo! Saya Dona Damayanti, mahasiswa Pendidikan Teknologi Informasi di Universitas Lampung. Saya suka belajar hal baru, terutama di dunia teknologi, desain, dan pendidikan. Semangat berbagi dan berkembang adalah motivasi saya.
+              </p>
+              <div class="social">
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>  
+
+    <!-- pengumpulan tugas -->
+    <section id="pengumpulan-tugas">
+        <div class="wrapper">
+            <h4>Pengumpulan <span>Tugas</span></h4>
+            <p>Berikut tugas tugas yang sudah dikerjakan.</p>
+
+            <div class="grid">
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Garis.png" alt="Tugas 1" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma garis sederhana</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Lingkaran.png" alt="Tugas 2" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma lingkaran sederhana</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="https://docs.google.com/spreadsheets/d/1lsKqMsI2PSy5nl_P95gq4EWlMHlUhWO5/edit?usp=sharing&ouid=101859035349331255182&rtpof=true&sd=true" target="_blank">
+                    <div class="item-detail">
+                        <img src="images/Kurva.png" alt="Tugas 3" />
+                        <div></div>
+                        <p>Pembuatan Speadsheet algoritma kurva sederhana</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">&copy; 2025 Dona Damayanti</div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
